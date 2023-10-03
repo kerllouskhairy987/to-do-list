@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> To Do List | Gegister page </title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bondi.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section>
+        <div class="container_register text-light">
+            <div class="alertSignup alert alert-danger">
+                <p>Please, complete your signUp ...</p>
+            </div>
+
+            <div class="content_register">
+                <div class="content_register_img">
+                    <img src="" id="myProfile">
+                    <label for="myFileInput" style="position: relative; ">
+                        <i class="icon fa-regular fa-pen-to-square"></i>
+                        <input type="file" id="myFileInput">
+                        <input onkeyup="piotext()" type="text" placeholder="Bio" id="pio">
+                    </label>
+                
+                </div>
+                <div class="content_register_info">
+                    <label for="userName">
+                        <p>Username</p>
+                        <input type="text" id="userName" placeholder="Enter your username">
+                    </label>
+                    <label for="email">
+                        <p>Email</p>
+                        <input type="email" id="email" placeholder="Enter your email">
+                    </label>
+                    <label for="passWord">
+                        <p>Password</p>
+                        <div class="passIcon">
+                            <input type="password" id="passWord" placeholder="Enter your password">
+                            <div class="increpted">
+                                <i class="icon fa-solid fa-eye-slash" onclick="toShow()"></i>
+                            </div>
+                            <div class="noIncrepted">
+                                <i class="icon fa-solid fa-eye" onclick="toHide()"></i>
+                            </div>
+                        </div>
+                    </label>
+                    <label for="current_passWord">
+                        <p>Current Password</p>
+                        <div class="currentpassIcon">
+                            <input type="password" id="current_passWord" placeholder="Current password">
+                            <div class="current_increpted">
+                                <i class="icon fa-solid fa-eye-slash" onclick="toShowCurrent()"></i>
+                            </div>
+                            <div class="current_noIncrepted">
+                                <i class="icon fa-solid fa-eye" onclick="toHideCurrent()"></i>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <p class="submit">
+                <input type="submit" onclick="LogUp()">
+            </p>
+            <div class="haveRegister">
+                <div class="div_icon">
+                    <i class="icon fa-solid fa-angles-down"></i>
+                </div>
+                <p>Already have an account <a href="login.html">Login</a></p>
+            </div>
+        </div>
+
+        
+    </section>
+
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/register.js"></script>
+</body>
+
+</html>

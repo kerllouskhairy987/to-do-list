@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+    <!-- LINK -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bondi.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header id="home">
+        <div class="container1">
+            <div class="content_header">
+                <div class="header_logo">
+                    <img src="images/LOGO.jpeg" alt="Logo" class="me-1">
+                    <a href="#home"><span>Prod<span>U</span>cts</span></a>
+                </div>
+                <div class="header_info" onclick="showAccount()">
+                    <span id="user"></span>
+                    <img src="" id="header_profileImg">
+                </div>
+                <div class="sign">
+                    <a class="me-2 link" href="register.html">signUp</a>
+                    <a class="link" href="login.html">signIn</a>
+                </div>
+            </div>
+        </div>
+        <div class="profilePart">
+            <div class="article_profile">
+                <div class="close_icon">
+                    <i class="icon fa-solid fa-xmark" onclick="hideAccount()"></i>
+                </div>
+
+                <div class="account">
+                    <img src="" id="accountProfileImage">
+
+                    <p><span id="accountUser"></span></p>
+                    <p><span id="accountEmail"></span></p>
+
+                    <div class="accountIcons">
+                        <i class="icon fa-solid fa-key me-2"></i>
+                        <i class="icon fa-solid fa-person-chalkboard me-2"></i>
+                        <i class="icon fa-solid fa-location-dot me-2"></i>
+                    </div>
+
+                    <div class="accountLogout">
+                        <button onclick="clearLocalStorage()" id="logoOut">Logout <i
+                                class="icon fa-solid fa-arrow-right-from-bracket"></i></button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- START SCROLL -->
+    <div class="scrollToTop">
+        <a href="#home"><i class="icon fa-solid fa-angles-up"></i></a>
+    </div>
+    <!-- END SCROLL -->
+    <!-- START INPUTS -->
+    <div class="container">
+        <div class="product_system">
+            <p class="product_system_p"></p>
+        </div>
+        <div class="inputs">
+            <div class="input_label ">
+                <label for="title" class="m-0 p-0">
+                    <p>Title</p>
+                    <input type="text" placeholder="Enter your title" id="title">
+                </label>
+                <label for="price">
+                    <p>Price</p>
+                    <input type="number" placeholder="Enter your price" id="price" onkeyup="getTotal()">
+                </label>
+                <label for="discount">
+                    <p>Discount</p>
+                    <input type="number" placeholder="Enter your discount" id="discount" onkeyup="getTotal()">
+                </label>
+                
+                <label for="category">
+                    <p>Category</p>
+                    <input type="text" placeholder="Enter your category" id="category">
+                </label>
+            </div>
+
+            <div class="searchAndCreate">
+                <div class="total_price">
+                    Total price : <span id="totalPrice">0 $</span>
+                </div>
+                <button id="create" onclick="createProduct()">craete It</button>
+                <div class="allSearch">
+                    
+                    <div class="delete_all"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END INPUTS -->
+    <!-- START TABLE PRODUCTS -->
+    <div class="product_info">
+        <p class="product_info_p"></p>
+    </div>
+    <div class="container div_table">
+
+        <table>
+            <thead>
+                <th>Number</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Discount</th>
+                <th>Total</th>
+                <th>Category</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </thead>
+
+            <tbody class="tBody"></tbody>
+        </table>
+    </div>
+    <!-- END TABLE PRODUCTS -->
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <script>
+        let typingEffect = new Typed(".product_system_p", {
+            strings: ["Product System"],
+            loop: true,
+            typeSpeed: 110,
+            backSpeed: 90,
+            backDelay: 1500,
+        });
+
+        let typingEffectProductsInformation = new Typed(".product_info_p", {
+            strings: ["Product Information"],
+            loop: true,
+            typeSpeed: 110,
+            backSpeed: 90,
+            backDelay: 1500,
+        })
+    </script>
+</body>
+
+</html>

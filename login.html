@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> To Do List | Gegister page </title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bondi.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section>
+        <div class="container_register text-light">
+            <div class="solder alert alert-danger">
+                <p>Email or password isn't correct</p>
+            </div>
+
+            <div class="content_register">
+                <div class="content_register_img">
+                    <img src="" id="myLognProfile">
+                    <label for="myFileInput" style="position: relative;">
+                        
+                        <input type="file" id="myFileInput">
+                        <input type="text" placeholder="Bio" id="pio" class="alreadyBio" readonly>
+                    </label>
+                </div>
+                <div class="content_register_info">
+                    
+                    <label for="email">
+                        <p>Email</p>
+                        <input type="email" id="email" placeholder="Enter your email">
+                    </label>
+                    <label for="passWord">
+                        <p>Password</p>
+                        <div class="passIcon">
+                            <input type="password" id="passWord" placeholder="Enter your password">
+                            <div class="increpted">
+                                <i class="icon fa-solid fa-eye-slash" onclick="toShow()"></i>
+                            </div>
+                            <div class="noIncrepted">
+                                <i class="icon fa-solid fa-eye" onclick="toHide()"></i>
+                            </div>
+                        </div>
+                    </label>
+                    
+                </div>
+            </div>
+
+            <p class="submit">
+                <input type="submit" onclick="LogIn()">
+            </p>
+            <div class="haveRegister">
+                <div class="div_icon">
+                    <i class="icon fa-solid fa-angles-down"></i>
+                </div>
+                <p>Don't have an account <a href="register.html">Register</a></p>
+            </div>
+        </div>
+
+        
+    </section>
+
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/register.js"></script>
+    <script src="js/login.js"></script>
+</body>
+
+</html>
